@@ -77,7 +77,7 @@ function App() {
                                         className="more-btn"
                                     >
                                         Check other Rates{" "}
-                                        <i class="fas fa-caret-right right-icon"></i>
+                                        <i className="fas fa-caret-right right-icon"></i>
                                     </a>
                                 </div>
                                 <div className="bottom-text">
