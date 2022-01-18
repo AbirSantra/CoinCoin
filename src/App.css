@@ -1,7 +1,160 @@
-*,
-*::after,
-*::before {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --light-grey: #929292;
+    --main-light: #4b6cb7;
+    --main-dark: #182848;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    background: #4b6cb7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to left,
+        #182848,
+        #4b6cb7
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #182848,
+        #4b6cb7
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.header {
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: calc(100vh - 6rem);
+    height: 100%;
+    position: relative;
+}
+
+.headline {
+    color: white;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.subheading {
+    color: white;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.hero-img {
+    position: absolute;
+    width: 330px;
+    right: 100px;
+    top: 0;
+    transform: rotate(18deg);
+}
+
+.hero-img img {
+    width: 100%;
+}
+
+.hero-card {
+    width: 100%;
+    height: 390px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.convert-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+}
+
+.convert-logo img {
+    width: 100%;
+}
+
+.bottom-text {
+    text-align: right;
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+    line-height: 1px;
+}
+
+.standard-rate {
+    color: white;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.more-btn {
+    width: 240px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+.right-icon {
+    margin-left: 1rem;
+}
+
+.more-btn:hover {
+    background-color: white;
+    color: var(--main-light);
+    transition: all 0.3s ease-in-out;
 }

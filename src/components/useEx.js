@@ -36,11 +36,11 @@ const useEx = () => {
 
     let toAmount, fromAmount;
     if (fromChange) {
-        toAmount = amount * rate;
+        toAmount = (amount * rate).toFixed(3);
         fromAmount = amount;
     } else {
         toAmount = amount;
-        fromAmount = amount / rate;
+        fromAmount = (amount / rate).toFixed(3);
     }
 
     const onChangeFromCurrency = (e) => {
@@ -68,6 +68,7 @@ const useEx = () => {
         fromAmount,
         onFromAmountChange,
         onToAmountChange,
+        rate,
     };
 };
 

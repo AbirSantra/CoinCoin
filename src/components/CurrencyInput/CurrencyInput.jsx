@@ -1,4 +1,5 @@
 import React from "react";
+import "./CurrencyInput.css";
 
 const CurrencyInput = (props) => {
     const {
@@ -7,19 +8,27 @@ const CurrencyInput = (props) => {
         onChangeCurrency,
         amount,
         onAmountChange,
+        labelText,
     } = props;
     return (
-        <div>
-            <input type="number" value={amount} onChange={onAmountChange} />
-            <select value={selectCurrency} onChange={onChangeCurrency}>
-                {rateList.map((listItem) => {
-                    return (
-                        <option key={listItem} value={listItem}>
-                            {listItem}
-                        </option>
-                    );
-                })}
-            </select>
+        <div className="currency-input-container">
+            <p className="label-text">{labelText}</p>
+            <div className="currency-input">
+                <select
+                    value={selectCurrency}
+                    onChange={onChangeCurrency}
+                    name="currency"
+                >
+                    {rateList.map((listItem) => {
+                        return (
+                            <option key={listItem} value={listItem}>
+                                {listItem}
+                            </option>
+                        );
+                    })}
+                </select>
+                <input type="number" value={amount} onChange={onAmountChange} />
+            </div>
         </div>
     );
 };
