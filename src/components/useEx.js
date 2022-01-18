@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 //constants
 const BASE_URL = `https://freecurrencyapi.net/api/v2/latest`;
-const API_KEY = process.env.REACT_APP_CURRENCY_API_KEY;
+const API_KEY = `11071aa0-77ac-11ec-945f-93b109a1a86f`;
 
 //main-logic
 const useEx = () => {
