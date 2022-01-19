@@ -1,5 +1,6 @@
 import "./App.css";
 import CurrencyInput from "./components/CurrencyInput/CurrencyInput";
+import RateCard from "./components/RateCard/RateCard";
 import useEx from "./components/useEx";
 import logo from "./img/Logo.png";
 import convertLogo from "./img/convert-logo.png";
@@ -17,10 +18,11 @@ function App() {
         onFromAmountChange,
         onToAmountChange,
         rate,
+        rateData,
     } = useEx();
     // console.log(exchangeRates);
-    console.log(fromCurrency);
-    console.log(toCurrency);
+    // console.log(fromCurrency);
+    // console.log(toCurrency);
     return (
         <div className="App">
             <div className="container">
@@ -33,12 +35,14 @@ function App() {
                     <div className="hero">
                         <div className="hero-content">
                             <div className="hero-text">
-                                <p className="headline">
-                                    Free & Fast Currency Converter
-                                </p>
-                                <p className="subheading">
-                                    Check foreign currency exchange rates.
-                                </p>
+                                <div className="hero-text-content">
+                                    <p className="headline">
+                                        Free & Fast Currency Converter
+                                    </p>
+                                    <p className="subheading">
+                                        Check foreign currency exchange rates.
+                                    </p>
+                                </div>
                                 <div className="hero-img">
                                     <img src={pigImage} alt="piggy-bank" />
                                 </div>
@@ -85,6 +89,29 @@ function App() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className="rate" id="more-section">
+                <div className="rate-container">
+                    <div className="rate-info-title">
+                        <h1>Other Rates</h1>
+                        <p>
+                            Find the exchanges rates of all other currencies
+                            below
+                        </p>
+                    </div>
+                    <div className="rate-info-content">
+                        {Object.keys(rateData).map((rateItem) => {
+                            return (
+                                <RateCard
+                                    key={rateItem}
+                                    baseCurrency={fromCurrency}
+                                    rate={rateData[rateItem]}
+                                    toCurrency={rateItem}
+                                />
+                            );
+                        })}
                     </div>
                 </div>
             </div>

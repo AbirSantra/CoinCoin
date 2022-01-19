@@ -14,15 +14,17 @@ const useEx = () => {
     const [amount, setAmount] = useState(1);
     const [rate, setRate] = useState();
     const [fromChange, setFromChange] = useState(true);
+    const [rateData, setRateData] = useState({});
     useEffect(() => {
         fetch(`${BASE_URL}?apikey=${API_KEY}&base_currency=INR`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                console.log(data.data);
                 setexchangeRates(Object.keys(data.data));
                 setFromCurrency(data.query.base_currency);
                 setToCurrency(Object.keys(data.data)[0]);
                 setRate(data.data[Object.keys(data.data)[0]]);
+                setRateData(data.data);
             });
     }, []);
 
@@ -69,6 +71,7 @@ const useEx = () => {
         onFromAmountChange,
         onToAmountChange,
         rate,
+        rateData,
     };
 };
 

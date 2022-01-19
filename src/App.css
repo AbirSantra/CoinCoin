@@ -11,10 +11,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
 }
 
 .container {
     min-height: 100vh;
+    padding-bottom: 4rem;
     background: #4b6cb7; /* fallback for old browsers */
     background: -webkit-linear-gradient(
         to left,
@@ -33,7 +35,7 @@
     width: 100%;
     height: 100%;
     margin: auto;
-    padding: 0 2rem;
+    padding: 0 4rem;
 }
 
 .header {
@@ -63,33 +65,51 @@
     position: relative;
 }
 
+.hero-text {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* flex-direction: column; */
+}
+
+.hero-text-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 4rem 0;
+    margin-bottom: 6rem;
+}
+
 .headline {
     color: white;
     font-weight: 500;
     font-size: 48px;
+    z-index: 5;
 }
 
 .subheading {
     color: white;
     font-weight: normal;
     font-size: 24px;
+    z-index: 5;
 }
 
 .hero-img {
     position: absolute;
     width: 330px;
     right: 100px;
-    top: 0;
-    transform: rotate(18deg);
+    top: 50pxpx;
+    /* z-index: 0; */
+    flex: 1;
 }
 
 .hero-img img {
+    transform: rotate(18deg);
     width: 100%;
 }
 
 .hero-card {
     width: 100%;
-    height: 390px;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
@@ -104,9 +124,9 @@
 
 .input-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 100%;
 }
 
@@ -114,7 +134,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 64px;
+    width: 6rem;
+    margin: auto 1rem;
 }
 
 .convert-logo img {
@@ -126,13 +147,14 @@
     font-size: 12px;
     font-weight: 300;
     color: white;
-    line-height: 1px;
+    /* line-height: 1px; */
 }
 
 .standard-rate {
     color: white;
     font-size: 36px;
     font-weight: normal;
+    margin: 2rem 0;
 }
 
 .more-btn {
@@ -157,4 +179,43 @@
     background-color: white;
     color: var(--main-light);
     transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .input-box {
+        flex-direction: column;
+    }
+
+    .convert-logo {
+        margin: 2rem auto;
+    }
+}
+
+.rate-container {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 4rem;
+}
+
+.rate-info-title {
+    margin: 2rem 0;
+}
+
+.rate-info-title h1 {
+    font-size: 48px;
+}
+
+.rate-info-title p {
+    font-size: 1.2rem;
+    color: var(--light-grey);
+}
+
+.rate-info-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
 }
