@@ -8,7 +8,7 @@ const RateCard = (props) => {
             <div className="rateCard-Container">
                 <div className="rateCard-info">
                     <div className="basecurrency">
-                        <span className="value">1.000</span>{" "}
+                        <span className="value">1.00</span>{" "}
                         <span className="name">{baseCurrency}</span>
                     </div>
                     <div className="equals-text">

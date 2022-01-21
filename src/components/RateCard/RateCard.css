@@ -28,6 +28,11 @@
     font-weight: bold;
 }
 
+.name {
+    color: var(--light-grey);
+    font-weight: bold;
+}
+
 .equals-text {
     color: var(--light-grey);
 }

@@ -43,17 +43,54 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 180px;
+    width: 160px;
 }
 
 .logo img {
     width: 100%;
+}
+
+.code-link {
+    width: fit-content;
+    padding: 0.5rem;
+    height: fit-content;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+.code-link:hover {
+    background-color: white;
+    color: var(--main-light);
+    transition: all 0.3s ease-in-out;
+}
+
+.code-link i {
+    margin-right: 8px;
+}
+
+.code-link a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in;
+}
+
+.code-link a:hover {
+    color: var(--main-light);
+    transition: all 0.3s ease-in-out;
 }
 
 .hero-content {

@@ -31,6 +31,15 @@ function App() {
                         <div className="logo">
                             <img src={logo} alt="" />
                         </div>
+                        <div className="code-link">
+                            <a
+                                href="https://github.com/AbirSantra/CoinCoin"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
                     </div>
                     <div className="hero">
                         <div className="hero-content">
