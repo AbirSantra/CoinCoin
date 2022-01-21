@@ -96,11 +96,10 @@
 
 .hero-img {
     position: absolute;
-    width: 330px;
-    right: 100px;
-    top: 50pxpx;
-    /* z-index: 0; */
-    flex: 1;
+    width: 35%;
+    right: 0px;
+    bottom: 100px;
+    /* z-index: -4; */
 }
 
 .hero-img img {
@@ -120,6 +119,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    z-index: 5;
 }
 
 .input-box {
@@ -136,10 +137,13 @@
     align-items: center;
     width: 6rem;
     margin: auto 1rem;
+    color: white;
+    font-size: 1.4rem;
 }
 
-.convert-logo img {
-    width: 100%;
+.convert-logo i {
+    margin-top: 2rem;
+    /* width: 100%; */
 }
 
 .bottom-text {
@@ -158,7 +162,8 @@
 }
 
 .more-btn {
-    width: 240px;
+    width: fit-content;
+    padding: 1.4rem;
     height: 50px;
     border: 1px solid white;
     border-radius: 10px;
@@ -179,16 +184,6 @@
     background-color: white;
     color: var(--main-light);
     transition: all 0.3s ease-in-out;
-}
-
-@media only screen and (max-width: 768px) {
-    .input-box {
-        flex-direction: column;
-    }
-
-    .convert-logo {
-        margin: 2rem auto;
-    }
 }
 
 .rate-container {
@@ -218,4 +213,138 @@
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-card {
+        padding: 2rem;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    .convert-logo {
+        margin: 2rem auto;
+    }
+
+    .standard-rate {
+        margin: 3rem 0;
+    }
+
+    .bottom-text {
+        margin-top: 1rem;
+    }
+
+    .hero-img {
+        width: 50%;
+        bottom: 250px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-card {
+        padding: 2rem;
+    }
+
+    .standard-rate {
+        margin: 3rem 0;
+    }
+
+    .bottom-text {
+        margin-top: 2rem;
+    }
+
+    .hero-img {
+        width: 50%;
+        bottom: 250px;
+    }
+
+    .headline {
+        font-size: 36px;
+    }
+
+    .subheading {
+        font-size: 18px;
+    }
+
+    .standard-rate {
+        font-size: 24px;
+    }
+
+    .rate-info-title h1 {
+        font-size: 36px;
+    }
+
+    .rate-info-title p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .main {
+        padding: 0 2rem;
+    }
+
+    .rate-container {
+        padding: 4rem 2rem;
+    }
+    .hero-card {
+        padding: 2rem;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    .convert-logo {
+        margin: 2rem auto;
+    }
+
+    .standard-rate {
+        margin: 3rem 0;
+    }
+
+    .bottom-text {
+        margin-top: 1rem;
+        font-size: 8px;
+    }
+
+    .hero-img {
+        width: 50%;
+        bottom: 250px;
+    }
+
+    .more-btn {
+        font-size: 14px;
+    }
+
+    .label-text {
+        font-size: 12px;
+    }
+
+    .convert-logo {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .hero-img {
+        bottom: 300px;
+    }
+
+    .convert-logo i {
+        margin: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .hero-img {
+        bottom: 400px;
+    }
+
+    .more-btn {
+        font-size: 12px;
+    }
 }

@@ -58,3 +58,17 @@
 .currency-input select {
     -ms-overflow-style: none;
 }
+
+@media only screen and (max-width: 480px) {
+    .label-text {
+        font-size: 14px;
+    }
+
+    .currency-input select {
+        font-size: 1rem;
+    }
+
+    .currency-input input {
+        font-size: 1rem;
+    }
+}

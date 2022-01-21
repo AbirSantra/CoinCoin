@@ -3,7 +3,7 @@ import CurrencyInput from "./components/CurrencyInput/CurrencyInput";
 import RateCard from "./components/RateCard/RateCard";
 import useEx from "./components/useEx";
 import logo from "./img/Logo.png";
-import convertLogo from "./img/convert-logo.png";
+// import convertLogo from "./img/convert-logo.png";
 import pigImage from "./img/Pig.svg";
 
 function App() {
@@ -43,9 +43,9 @@ function App() {
                                         Check foreign currency exchange rates.
                                     </p>
                                 </div>
-                                <div className="hero-img">
-                                    <img src={pigImage} alt="piggy-bank" />
-                                </div>
+                            </div>
+                            <div className="hero-img">
+                                <img src={pigImage} alt="piggy-bank" />
                             </div>
                             <div className="hero-card">
                                 <div className="input-box">
@@ -58,7 +58,7 @@ function App() {
                                         labelText="Convert from"
                                     />
                                     <div className="convert-logo">
-                                        <img src={convertLogo} alt="" />
+                                        <i class="fas fa-exchange-alt"></i>
                                     </div>
                                     <CurrencyInput
                                         rateList={exchangeRates}
