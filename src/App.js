@@ -37,7 +37,7 @@ function App() {
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <i class="fab fa-github"></i> Code
+                                <i className="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ function App() {
                                         labelText="Convert from"
                                     />
                                     <div className="convert-logo">
-                                        <i class="fas fa-exchange-alt"></i>
+                                        <i className="fas fa-exchange-alt"></i>
                                     </div>
                                     <CurrencyInput
                                         rateList={exchangeRates}

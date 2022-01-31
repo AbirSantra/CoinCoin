@@ -12,7 +12,7 @@ const RateCard = (props) => {
                         <span className="name">{baseCurrency}</span>
                     </div>
                     <div className="equals-text">
-                        <i class="fas fa-exchange-alt"></i>
+                        <i className="fas fa-exchange-alt"></i>
                     </div>
                     <div className="tocurrency">
                         <span className="value">{rate.toFixed(3)}</span>{" "}
