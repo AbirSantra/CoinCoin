@@ -3,6 +3,7 @@ import "./RateCard.css";
 
 const RateCard = (props) => {
     const { baseCurrency, rate, toCurrency } = props;
+    // console.log(rate);
     return (
         <div className="rateCard">
             <div className="rateCard-Container">

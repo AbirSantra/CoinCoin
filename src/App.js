@@ -23,6 +23,7 @@ function App() {
     // console.log(exchangeRates);
     // console.log(fromCurrency);
     // console.log(toCurrency);
+    // console.log(rateData);
     return (
         <div className="App">
             <div className="container">
@@ -116,7 +117,7 @@ function App() {
                                 <RateCard
                                     key={rateItem}
                                     baseCurrency={fromCurrency}
-                                    rate={rateData[rateItem]}
+                                    rate={rateData[rateItem].value}
                                     toCurrency={rateItem}
                                 />
                             );
